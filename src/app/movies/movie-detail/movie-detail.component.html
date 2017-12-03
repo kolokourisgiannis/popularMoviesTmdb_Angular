@@ -1,0 +1,32 @@
+<div class="media">
+    <div class="media-left">
+        <img [src]="imageUrl(movie.poster_path)" class="media-object">
+    </div>
+    <div class="media-body">
+        <div class="col-sm-10">
+		<div class="row">
+		<div class="col-sm-9">
+		<h2 class="media-heading">{{ movie.title }}</h2><span class="dateMovie">{{ movie.release_date }}</span>
+		</div>
+		<div class="col-sm-3">
+		<h3 class="voteMovie">{{ movie.vote_average }} <span   class="glyphicon glyphicon-star-empty"></span></h3> 
+		
+		</div>
+		</div>
+            <div class="row">
+			<div class="col-sm-8">
+			
+            <p class="test" > {{ movie.overview }} </p>
+			
+			
+			
+			
+			</div>
+			</div>
+			
+</div>
+        
+    </div>
+
+
+</div>

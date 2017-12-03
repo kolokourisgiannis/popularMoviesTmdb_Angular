@@ -1,0 +1,34 @@
+.bodyApp{
+	margin-left:2%;
+	margin-right:2%;
+}
+
+.panel{
+	background-color:#1a1a1a;
+	
+}
+.moviesList .movies{
+	background-color:#1a1a1a;
+	height:500px;
+	overflow-y: auto;
+    overflow-x: hidden;
+	color:white;
+	
+}
+.moviesList .movies img{
+	cursor:pointer;
+	
+}
+
+.moviesList h3{
+	color:white;
+	text-align:center;
+	text-transform: capitalize;
+}
+
+.infoMovie{
+	background-color:#1a1a1a;
+	height:600px;
+	overflow-y: auto;
+    overflow-x: hidden;
+}

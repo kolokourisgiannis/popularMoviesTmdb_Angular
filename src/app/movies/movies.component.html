@@ -1,0 +1,36 @@
+<div class="row bodyApp">
+    <div class="col-md-3 ">
+        <div class="panel panel-default moviesList">
+            <h3>Find all popular movies</h3>				
+            <hr>
+            <ul class="list-group  movies" >
+                <li   *ngFor="let movie of movies" >
+                    <div class="media">
+                        <div class="media-left">
+                            <img [src]="imageUrl(movie.poster_path)" (click)="selectMovie(movie)" class="media-object" style="width:35px">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="javascript:void(0)"(click)="selectMovie(movie)"  >{{ movie.title }} </a></h4>
+                            <span>{{ movie.release_date }}</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <hr>
+            <ul class="pager">
+                <li class="previous"><a href="javascript:void(0)" *ngIf="currentPage !== 1" (click)="previousPage()">Previous</a></li>
+                <li class="next"><a href="javascript:void(0)" *ngIf="currentPage !== 1000" (click)="nextPage()">Next</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-9"> 
+        <div class="panel panel-default infoMovie">
+            <div class="container" >
+                <div class="movie-detail" *ngIf="selectedMovie">
+                  <app-movie-detail [movie]="selectedMovie">
+                    </app-movie-detail> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
