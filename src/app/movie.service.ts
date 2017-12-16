@@ -9,8 +9,14 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  
+
   getMovies (page: number): Observable<MoviesResponse> {
     return this.http.get<MoviesResponse>(`${AppSettings.MOVIES_API_URL}&page=${page}`);
   }
+
+  
+  
+  
+ 
+  
 }

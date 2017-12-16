@@ -1,34 +1,80 @@
 .bodyApp{
-	margin-left:2%;
-	margin-right:2%;
+    /* margin-top:2%; */
 }
 
-.panel{
-	background-color:#1a1a1a;
+.navbar-brand{
+	color:red;
+}
+.searchIcon{
+	-webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    transform: rotate(315deg);
+    font-size:120%;
+    color:white;
+    cursor:pointer;
 	
 }
-.moviesList .movies{
-	background-color:#1a1a1a;
-	height:500px;
-	overflow-y: auto;
-    overflow-x: hidden;
+
+.bodyApp .card-title{
 	color:white;
+	background: rgba(0,0,0,0.7);
+	display: table-cell;
+  vertical-align: middle;
+  min-height:20%;
 	
-}
-.moviesList .movies img{
-	cursor:pointer;
 	
+
 }
 
-.moviesList h3{
-	color:white;
-	text-align:center;
-	text-transform: capitalize;
+.card-img-overlay{
+	min-height:30%;
+	min-width:100%;
+	display: table;
+	 text-align: center;
 }
 
-.infoMovie{
-	background-color:#1a1a1a;
-	height:600px;
-	overflow-y: auto;
-    overflow-x: hidden;
+.infoMovie {
+    background-color:#002b80;
+}
+.card{
+    background-color:#002b80;
+    border:1px solid white;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    cursor:pointer;
+	
+}
+.card:hover {
+    background-color:red;
+    border:1px solid red;
+    opacity:0.7;
+}
+.pagination{
+    margin-top:2%;
+}
+.pagination a{
+    color:red;
+    background-color:#343a40;
+}
+.pagination a:hover{
+    color:white;
+
+}
+.pagination .page-item .page-link {
+
+    border:1px solid #002b80;
+}
+.modal-footer button:hover{
+    color:red;
+}
+
+
+
+.footer{
+
+   color: white;
+  
 }

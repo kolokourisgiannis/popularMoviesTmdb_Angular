@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-
+ import { Component } from '@angular/core';
+ import {Movie} from './movie';
+ import { FormControl } from '@angular/forms';
+ import {MovieService} from './movie.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Popular Movies';
+  title = 'Popular Movies ';
+
+
+  constructor(private service: MovieService) {}
+
+
+	 
+  }
   
   
- 
-}

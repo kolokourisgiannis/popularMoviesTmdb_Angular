@@ -15,8 +15,14 @@ export class MovieDetailComponent implements OnInit {
   ngOnInit() {
   }
 
-  imageUrl(filePath: string) {
-    return `${AppSettings.IMAGES_BASE_URL}/${AppSettings.IMAGES_SIZE}/${filePath}`;
+   imageUrl(filePath: string) {
+	 
+	  var imgLink = `${AppSettings.IMAGES_BASE_URL}/${AppSettings.IMAGES_SIZE}/${filePath}` ;
+	  if ( `https://image.tmdb.org/t/p/w500/${filePath}` == `https://image.tmdb.org/t/p/w500/null` ) {
+		  
+	   return `../../../assets/images/default.jpg`;
+	  }
+      return imgLink;
   }
 
 }

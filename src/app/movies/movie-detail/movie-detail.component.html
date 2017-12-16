@@ -1,32 +1,21 @@
+
+<!-- content modal  -->
+<div class="container">
 <div class="media">
-    <div class="media-left">
-       <!-- <img [src]="imageUrl(movie.poster_path)" class="media-object"> -->
-    </div>
+    <img class="mr-3" [src]="imageUrl(movie.poster_path)"  alt="Generic placeholder image" style="width:40%;">
     <div class="media-body">
-        <div class="col-sm-10">
-		<div class="row">
-		<div class="col-sm-9">
-		<h2 class="media-heading">{{ movie.title }}</h2><span class="dateMovie">{{ movie.release_date }}</span>
-		</div>
-		<div class="col-sm-3">
-		<h3 class="voteMovie">{{ movie.vote_average }} <span   class="glyphicon glyphicon-star-empty"></span></h3> 
-		
-		</div>
-		</div>
-            <div class="row">
-			<div class="col-sm-8">
-			
-            <p class="test" > {{ movie.overview }} </p>
-			
-			
-			
-			
-			</div>
-			</div>
-			
-</div>
-        
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 style="color:white">{{ movie.title }}</h2><span class="dateMovie">{{ movie.release_date }}</span>
+            </div>
+            <div class="col-sm-4">
+               <h4 class="voteMovie" data-toggle="tooltip" data-placement="top" title="Voted {{ movie.vote_count }} people">{{ movie.vote_average }}/10 &#9734;</h4>
+            </div>
+
+        </div>
+        <p class="overviewMovie">{{ movie.overview }} </p>   
     </div>
 
-
+</div>
 </div>

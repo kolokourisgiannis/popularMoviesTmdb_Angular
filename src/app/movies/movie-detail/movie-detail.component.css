@@ -1,27 +1,18 @@
 .media {
-	 margin-top: 30px;
+    margin-top: 30px;
 }
 
 .media img{
-	height:50%;
+    height:50%;
 }
 
-.media-heading{
-	color:white;
-}
-p.test{
-	color:white;
-	 
-	word-wrap: break-word;
-    white-space:initial;
-    font-size: 0.9em;
-    line-height: 1.2em;
-    margin-top: 30px;
-	margin-right:30px;
-}
-.dateMovie{
-	color:  #8c8c8c;
+.media .dateMovie{
+    color:  #8c8c8c;
 } 
-.voteMovie{
-	color:#ffffcc;
+.media .voteMovie{
+    color:#ffffcc;
+}
+
+.media .overviewMovie{
+    color:#ffffff;
 }
