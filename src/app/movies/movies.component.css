@@ -3,37 +3,30 @@
 }
 
 .navbar-brand{
-	color:red;
+    color:red;
 }
 .searchIcon{
-	-webkit-transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
     -moz-transform: rotate(315deg);
     -o-transform: rotate(315deg);
     transform: rotate(315deg);
     font-size:120%;
     color:white;
     cursor:pointer;
-	
 }
-
 .bodyApp .card-title{
-	color:white;
-	background: rgba(0,0,0,0.7);
-	display: table-cell;
-  vertical-align: middle;
-  min-height:20%;
-	
-	
-
+    color:white;
+    background: rgba(0,0,0,0.7);
+    display: table-cell;
+    vertical-align: middle;
+    min-height:20%;
 }
-
 .card-img-overlay{
-	min-height:30%;
-	min-width:100%;
-	display: table;
-	 text-align: center;
+    min-height:30%;
+    min-width:100%;
+    display: table;
+    text-align: center;
 }
-
 .infoMovie {
     background-color:#002b80;
 }
@@ -45,7 +38,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     cursor:pointer;
-	
+
 }
 .card:hover {
     background-color:red;
@@ -61,7 +54,6 @@
 }
 .pagination a:hover{
     color:white;
-
 }
 .pagination .page-item .page-link {
 
@@ -71,10 +63,6 @@
     color:red;
 }
 
-
-
 .footer{
-
-   color: white;
-  
+    color: white;
 }
