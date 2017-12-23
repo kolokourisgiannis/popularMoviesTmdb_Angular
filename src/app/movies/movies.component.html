@@ -1,67 +1,57 @@
-
 <nav class="navbar navbar-dark bg-dark sticky-top">
     <a class="navbar-brand" href="#">{{ title }}</a>
     <form class="form-inline" onkeypress="return event.keyCode != 13">
         <div class="input-group">
             <input class="form-control" type="text" name="search " #searchTerm (keyup.enter)="checkInput(searchTerm,my)" (keyup.enter)="performSearch(searchTerm)" placeholder="Search movie" aria-label="Search"/>
-				<button (click)="performSearch(searchTerm)" type="button" class="btn btn-outline-danger" (click)="checkInput(searchTerm,my)">
-					<div class="searchIcon"> 
-						&#9906; 
-					</div>
-				</button>			
+            <button (click)="performSearch(searchTerm)" type="button" class="btn btn-outline-danger" (click)="checkInput(searchTerm,my)">
+                <div class="searchIcon"> 
+                    &#9906; 
+                </div>
+            </button>			
         </div>
     </form>
 </nav>
-
-
-
-
 <div class="container" >
-	<!-- movies card -->
+    <!-- movies card -->
     <div class="row  bodyApp">
         <div class="card img" style="width: 15rem;" *ngFor="let movie of movies" (click)="selectMovie(movie)" data-toggle="modal" data-target="#myModal">
              <img class="card-img-top" [src]="imageUrl(movie.poster_path)" alt="Card image" style="width:100%;">
-			 <div class="card-img-overlay ">
-				<h4 class="card-title ">{{ movie.title }}</h4>
-				
-			 </div>
+            <div class="card-img-overlay ">
+                <h4 class="card-title ">{{ movie.title }}</h4>
+
+            </div>
         </div> 
     </div>
-	
-	<!-- next, previous buttons -->
-	<div class="row"  #my>	
-		<div class="col-sm-3 offset-sm-9">
-			<ul class="pagination">
-				<li class="page-item" ><a class="page-link " *ngIf="currentPage !== 1" (click)="previousPage()" href="javascript:void(0)" >Previous</a></li>
-				<li class="page-item"><a class="page-link" >{{currentPage}}</a></li>
-				<li class="page-item" ><a class="page-link" *ngIf="currentPage !== 1000" (click)="nextPage()" href="javascript:void(0)" >Next</a></li>
-			</ul>
-		</div>
-	</div>	
+    <!-- next, previous buttons -->
+    <div class="row"  #my>	
+        <div class="col-sm-3 offset-sm-9">
+            <ul class="pagination">
+                <li class="page-item" ><a class="page-link " *ngIf="currentPage !== 1" (click)="previousPage()" href="javascript:void(0)" >Previous</a></li>
+                <li class="page-item"><a class="page-link" >{{currentPage}}</a></li>
+                <li class="page-item" ><a class="page-link" *ngIf="currentPage !== 1000" (click)="nextPage()" href="javascript:void(0)" >Next</a></li>
+            </ul>
+        </div>
+    </div>	
 </div>
-
 
 <!-- Modal movie detail -->
 <div class="modal fade" id="myModal">
     <div class="modal-dialog modal-lg">
         <div class="modal-content infoMovie">
-            
+
             <div class="modal-body" *ngIf="selectedMovie">
                 <app-movie-detail [movie]="selectedMovie">
                 </app-movie-detail>
             </div>
-			
-            
+
+
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-dismiss="modal" style="cursor:pointer;" >Close</button>
             </div>
         </div>
     </div>
 </div>
-
-
-
- <nav class="navbar navbar-expand-sm bg-dark navbar-dark bottom footer">
-  An angular application where shows all movies  based on popularity, using APIs from "The Movie DB". Also shows movies with search.
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark bottom footer">
+    An angular application where shows all movies  based on popularity, using APIs from "The Movie DB". Also shows movies with search.
 </nav>
- 
+
